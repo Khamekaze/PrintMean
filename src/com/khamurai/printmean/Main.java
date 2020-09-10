@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Mean of 1, 2, 3, 4: " + meanCalc(1, 2, 3, 4));
         System.out.println("Mean of 1, -2, 3, -4: " + meanCalc(1, -2, 3, -4));
         System.out.println("Mean of -1, -11, 24, 2: " + meanCalc(-1, -11, 24, 2));
-        //System.out.println("Mean of -1, -11, 24, 2, 2000: " + meanCalc(-1, -11, 24, 2, 2000));
+        System.out.println("Mean of -1, -11, 24, 2, 2000: " + meanCalc(-1, -11, 24, 2, 2000));
     }
 
     public static String meanCalc(double a, double b, double c, double d) {
