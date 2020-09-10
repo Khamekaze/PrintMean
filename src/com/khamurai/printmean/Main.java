@@ -1,25 +1,29 @@
 package com.khamurai.printmean;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
-	    System.out.println("Mean of 1, 1, 3, 3: " + meanCalc(1, 1, 3, 3));
-        System.out.println("Mean of 1, 1, 3, 3: " + meanCalc(1, 1, 3, 3));
-        System.out.println("Mean of 1, 2, 3, 4: " + meanCalc(1, 2, 3, 4));
-        System.out.println("Mean of 1, -2, 3, -4: " + meanCalc(1, -2, 3, -4));
-        System.out.println("Mean of -1, -11, 24, 2: " + meanCalc(-1, -11, 24, 2));
-        System.out.println("Mean of -1, -11, 24, 2, 2000: " + meanCalc(-1, -11, 24, 2, 2000));
+	    meanCalc(1, 1, 2, 4);
+	    meanCalc(1, 2, 3, 4);
+	    meanCalc(1, -2, 3, -4);
+	    meanCalc(24, -150, 1000, -235);
+	    meanRandomCalc();
     }
 
-    public static String meanCalc(double a, double b, double c, double d) {
+    public static void meanCalc(double a, double b, double c, double d) {
         double mean = (a + b + c + d) / 4.0;
-        String meanString = String.valueOf(mean);
-        return meanString;
+        System.out.println("Mean of " + a + ", " + b + ", " + c + ", " + d + ": " + mean);
     }
 
-    public static String meanCalc(double a, double b, double c, double d, double e) {
-        double mean = (a + b + c + d + e) / 5.0;
-        String meanString = String.valueOf(mean);
-        return meanString;
+    public static void meanRandomCalc() {
+        Random rand = new Random();
+        double a = rand.nextInt(500);
+        double b = rand.nextInt(500);
+        double c = rand.nextInt(500);
+        double d = rand.nextInt(500);
+        double mean = (a + b + c + d) / 4.0;
+        System.out.println("Mean of " + a + ", " + b + ", " + c + ", " + d + ": " + mean);
     }
 }
